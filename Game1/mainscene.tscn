@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3glkiifhvkf2"]
+
+[ext_resource type="PackedScene" uid="uid://c8rg5fdaj81v2" path="res://Player.tscn" id="1_2lq78"]
+[ext_resource type="Script" path="res://Global.gd" id="1_xmuex"]
+[ext_resource type="PackedScene" uid="uid://bjv1l5ag64gli" path="res://spawner.tscn" id="4_u7q4d"]
+
+[node name="mainscene" type="Node2D"]
+script = ExtResource("1_xmuex")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_2lq78")]
+position = Vector2(2, 14)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-2, 6)
+scale = Vector2(1.5, 1.5)
+zoom = Vector2(0.75, 0.75)
+
+[node name="Node2D" parent="." instance=ExtResource("4_u7q4d")]
+position = Vector2(625, -289)
+scale = Vector2(3.5, 3.5)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_u7q4d")]
+position = Vector2(-550, -302)
+scale = Vector2(3.5, 3.5)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_u7q4d")]
+position = Vector2(-5.00003, -328)
+scale = Vector2(3.5, 3.5)
